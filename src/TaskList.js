@@ -7,6 +7,7 @@ class TaskList {
 
   addTask(dueDate, desc) {
     const task = new Task(dueDate, desc);
+    console.log(task);
     this.tasks.push(task);
   }
 

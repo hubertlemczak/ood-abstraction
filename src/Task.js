@@ -1,13 +1,13 @@
 class Task {
   // #dateDue;
   // #description;
-  // #status;
+  #status;
   constructor(dateDue, description) {
     //Task due date - not all tasks have a due date. If a task has no
     //due date, dueDate will be null
     this.dateDue = dateDue;
     this.description = description;
-    this.status = 'incomplete';
+    this.#status = 'incomplete';
   }
 
   getDueDate() {
@@ -15,13 +15,11 @@ class Task {
   }
 
   getStatus() {
-    return this.status;
+    return this.#status;
   }
 
   isComplete() {
-    let status = false;
-    if (this.getStatus() === 'complete') status = true;
-    return status;
+    return this.getStatus() === 'complete';
   }
 
   getDesc() {
@@ -29,7 +27,7 @@ class Task {
   }
 
   setComplete() {
-    this.status = 'complete';
+    this.#status = 'complete';
   }
 }
 

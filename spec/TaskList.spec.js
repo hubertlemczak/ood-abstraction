@@ -3,7 +3,7 @@ const TaskList = require('../src/TaskList.js');
 describe('TaskList', () => {
   let taskList;
 
-  todayPlusDays = (days) => {
+  const todayPlusDays = (days) => {
     return new Date(new Date().getTime() + 24 * 60 * 60 * 1000 * days);
   };
 
